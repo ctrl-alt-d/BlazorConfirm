@@ -1,4 +1,4 @@
-# BlazorConfirm.
+# BlazorConfirm
 
 A Blazor wrapper of [Window.confirm()](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm) as .Net Blazor Component. 
 
