@@ -7,7 +7,7 @@
     <BlazorLinkOnBuild>false</BlazorLinkOnBuild>
     <LangVersion>7.3</LangVersion>
 
-    <PackageId>AppLogger</PackageId>
+    <PackageId>BlazorConfirm</PackageId>
     <Version>0.6.0</Version>
     <Authors>Dani Herrera</Authors>
     <Company>ctrl.alt.d</Company>
