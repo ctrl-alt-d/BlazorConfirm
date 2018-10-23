@@ -4,9 +4,9 @@ A Blazor wrapper of [Window.confirm()](https://developer.mozilla.org/en-US/docs/
 
 The sample project has been published [here](https://github.com/BlazorConfirm/).
 
-## ScreenShot
+## ScreenShot and Demo
 
-Because we love screen shots
+Because we love screen shots and [demo](https://ctrl-alt-d.github.io/BlazorConfirm/)
 
 ![BlazorConfig ScreenShot](./ScreenShots/BlazorConfirm.gif)
 
