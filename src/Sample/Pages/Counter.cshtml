@@ -1,0 +1,45 @@
+﻿@page "/counter"
+@inject ctrlaltd.SimpleBlazorComponents.IBlazorConfirmDialog blazorConfirmDialog
+@inject Microsoft.AspNetCore.Blazor.Services.IUriHelper UriHelper
+
+<br/>
+<br/>
+
+<h2>Current count: @currentCount</h2>
+
+<button class="btn btn-primary" onclick="@IncrementCount">Click me</button>
+
+<br/>
+<br/>
+
+<button  class="btn btn-primary" onclick="@goFetchData">Go fetch data!</button>
+
+<br/>
+<br/>
+
+  Don't ask <input bind="@blazorConfirmDialog.DontAskjJustExecute" 
+                   type="checkbox" class="form-check-input ml-3" style="width: 30px; height: 30px;"/>
+
+@functions {
+    
+
+    int currentCount = 0;
+
+    void IncrementCount()
+    {
+        blazorConfirmDialog.NewDialog( message: "Are you sure do you want to increment the counter?", 
+                                       onSuccessDelegate: ( () => {System.Console.WriteLine("Increasing");
+                                                                   currentCount++;
+                                                                   StateHasChanged();
+                                                                   } ) );
+    }
+
+    void goFetchData()
+    {
+        
+
+        blazorConfirmDialog.NewDialog( onSuccessDelegate: ( () => {UriHelper.NavigateTo(  "/fetchdata" ); } ) );
+    }
+
+
+}
