@@ -1,6 +1,6 @@
 # BlazorConfirm.
 
-A Blazor wrapper of [Window.confirm()](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm) in pure .Net. 
+A Blazor wrapper of [Window.confirm()](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm) as .Net Blazor Component. 
 
 The sample project has been published [here](https://github.com/BlazorConfirm/).
 
@@ -19,7 +19,10 @@ Because we love screen shots
 
 ## Configuration
 
-Copy [BlazorConfirm project](./src/BlazorConfirm) on your solution.
+* `dotnet add package BlazorConfirm --version 0.6.0`
+* `Install-Package BlazorConfirm -Version 0.6.0`
+* `paket add BlazorConfirm --version 0.6.0`
+
 
 ## Configure the dependency injection
 
@@ -88,3 +91,7 @@ Dani Herrera
 ## License
 
 BlazorConfirm is licensed under [MIT license](http://www.opensource.org/licenses/mit-license.php)
+
+### Special Thanks
+
+Thankyou to [@ghidello](https://github.com/ghidello) and  https://github.com/sotsera/sotsera.blazor.toaster repo.
