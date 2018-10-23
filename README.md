@@ -6,7 +6,7 @@ The sample project has been published [here](https://github.com/BlazorConfirm/).
 
 ## ScreenShot and Demo
 
-Because we love screen shots and [demo](https://ctrl-alt-d.github.io/BlazorConfirm/?)
+Because we love screen shots and [demo](https://goo.gl/k1swZb)
 
 ![BlazorConfig ScreenShot](./ScreenShots/BlazorConfirm.gif)
 
