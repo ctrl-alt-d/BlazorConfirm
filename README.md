@@ -8,7 +8,7 @@ The sample project has been published [here](https://github.com/BlazorConfirm/).
 
 Because we love screen shots
 
-![BlazorConfig ScreenShot](./ScreenShots/BlazorConfig.gif)
+![BlazorConfig ScreenShot](./ScreenShots/BlazorConfirm.gif)
 
 
 ## Changes
