@@ -2,11 +2,17 @@
 
 A Blazor wrapper of [Window.confirm()](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm) as .Net Blazor Component. 
 
-The sample project has been published [here](https://github.com/BlazorConfirm/).
+The sample project has been published [here](https://ctrl-alt-d.github.io/BlazorConfirm/).
+
+```
+Note: Just as Blazor, this repo is also experimental.
+```
 
 ## ScreenShot and Demo
 
-Because we love screen shots and demo at <span>https://</span>ctrl-alt-d.github.io/BlazorConfirm/
+Because we love screen shots and demos.
+
+Demo: https://ctrl-alt-d.github.io/BlazorConfirm/
 
 ![BlazorConfig ScreenShot](./ScreenShots/BlazorConfirm.gif)
 
@@ -19,10 +25,13 @@ Because we love screen shots and demo at <span>https://</span>ctrl-alt-d.github.
 
 ## Configuration
 
-* `dotnet add package BlazorConfirm --version 0.6.0`
-* `Install-Package BlazorConfirm -Version 0.6.0`
-* `paket add BlazorConfirm --version 0.6.0`
-
+```
+dotnet add package BlazorConfirm --version 0.6.0
+```
+Or:
+```
+Install-Package BlazorConfirm -Version 0.6.0`
+```
 
 ## Configure the dependency injection
 
@@ -83,7 +92,7 @@ void IncrementCount()
 A sample to confirm exit current page:
 
 ```c#
-blazorConfirmDialog.NewDialog( onSuccessDelegate: ( () => {UriHelper.NavigateTo(  "/fetchdata" ); } ) );
+blazorConfirmDialog.NewDialog( onSuccessDelegate: (() => {UriHelper.NavigateTo(  "/fetchdata" );}));
 ```
 
 ## Credits
