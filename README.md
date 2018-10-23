@@ -26,6 +26,8 @@ Because we love screen shots and demo at <span>https://</span>ctrl-alt-d.github.
 
 ## Configure the dependency injection
 
+Set DI on `ConfigureServices` of your `Startup.cs`:
+
 ```c#
 using ctrlaltd.SimpleBlazorComponents;
 using Microsoft.AspNetCore.Blazor.Builder;
@@ -38,7 +40,7 @@ namespace Sample
         public void ConfigureServices(IServiceCollection services)
         {
             ...
-            services.AddSingleton<IBlazorConfirmDialog, BlazorConfirmDialog>();
+            services.AddSingleton<IBlazorConfirmDialog, BlazorConfirmDialog>(); //Add as singleton.
         }
 ```
 
@@ -53,35 +55,35 @@ and add the component to `App.cshtml` (or to another component always loaded in 
 
 ## Usage
 
-In a component
+In a component:
 
 ```c#
 @inject ctrlaltd.SimpleBlazorComponents.IBlazorConfirmDialog blazorConfirmDialog
 ```
 
-In a class
+In a class:
 
 ```c#
 [Inject] 
 protected ctrlaltd.SimpleBlazorComponents.IBlazorConfirmDialog blazorConfirmDialog { get; set; }
 ```
 
-Wrap your function into the dialog:
+At this point you can wrap your code into the `onSuccessDelegate` Dialog:
 
 ```c#
-    void IncrementCount()
-    {
-        blazorConfirmDialog.NewDialog( message: "Are you sure do you want to increment the counter?", 
-                                       onSuccessDelegate: ( () => {currentCount++;
-                                                                   StateHasChanged();
-                                                                   } ) );
-    }
+void IncrementCount()
+{
+    blazorConfirmDialog.NewDialog( message: "Are you sure do you want to increment the counter?", 
+                                    onSuccessDelegate: ( () => {currentCount++;
+                                                                StateHasChanged();
+                                                                } ) );
+}
 ```
 
-Confirm navigate:
+A sample to confirm exit current page:
 
 ```c#
-    blazorConfirmDialog.NewDialog( onSuccessDelegate: ( () => {UriHelper.NavigateTo(  "/fetchdata" ); } ) );
+blazorConfirmDialog.NewDialog( onSuccessDelegate: ( () => {UriHelper.NavigateTo(  "/fetchdata" ); } ) );
 ```
 
 ## Credits
