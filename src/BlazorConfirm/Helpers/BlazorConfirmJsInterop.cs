@@ -11,5 +11,19 @@ namespace ctrlaltd.SimpleBlazorComponents
                 "blazorConfirmJsFunctions.blazorConfirm",
                 message);
         }
+
+        public static Task SetOnbeforeunload()
+        {
+            return JSRuntime.Current.InvokeAsync<System.Action>(
+                "blazorConfirmJsFunctions.setOnbeforeunload"
+                );
+        }
+
+        public static Task UnsetOnbeforeunload()
+        {
+            return JSRuntime.Current.InvokeAsync<System.Action>(
+                "blazorConfirmJsFunctions.unsetOnbeforeunload"
+                );
+        }
     }
 }

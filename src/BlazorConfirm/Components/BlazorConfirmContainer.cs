@@ -14,10 +14,16 @@ namespace ctrlaltd.SimpleBlazorComponents
 
         [Inject] protected IBlazorConfirmDialog BlazorConfirmDialog { get; set; }
 
-        protected override void OnParametersSet()
+        private bool _IsSet { get; set; } = false;
+
+        protected override async Task OnAfterRenderAsync()
         {
-            base.OnParametersSet();
-            BlazorConfirmDialog.OnSetFunc += Confirm;
+            if (!_IsSet)
+            {
+                _IsSet = true;
+                BlazorConfirmDialog.OnSetFunc += Confirm;
+                await BlazorConfirmDialog.FixOnbeforeunload();
+            }
         }
 
         protected void Confirm()
@@ -27,7 +33,8 @@ namespace ctrlaltd.SimpleBlazorComponents
             {
                 bool letsGo = await ConfirmExitJsInterop
                                     .ConfirmExit(BlazorConfirmDialog.Message ?? "Are you sure?");
-                if (letsGo) {
+                if (letsGo)
+                {
                     BlazorConfirmDialog.OnSuccessDelegate?.Invoke();
                 }
             });

@@ -2,23 +2,43 @@
 @inject ctrlaltd.SimpleBlazorComponents.IBlazorConfirmDialog blazorConfirmDialog
 @inject Microsoft.AspNetCore.Blazor.Services.IUriHelper UriHelper
 
-<br/>
-<br/>
 
-<h2>Current count: @currentCount</h2>
-
-<button class="btn btn-primary" onclick="@IncrementCount">Click me</button>
-
-<br/>
-<br/>
-
-<button  class="btn btn-primary" onclick="@goFetchData">Go fetch data!</button>
-
-<br/>
-<br/>
-
-  Don't ask <input bind="@blazorConfirmDialog.DontAskjJustExecute" 
+<div class="card">
+  <div class="card-header">
+    Counter
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Current count: @currentCount</h5>
+    <p class="card-text">
+        Don't ask <input bind="@blazorConfirmDialog.DontAskjJustExecute" 
                    type="checkbox" class="form-check-input ml-3" style="width: 30px; height: 30px;"/>
+    </p>
+    <div>
+        <button class="btn btn-primary mb-2 float-left mr-5" onclick="@IncrementCount">Click me</button>
+        <button  class="btn btn-primary float-left" onclick="@goFetchData">Go fetch data!</button>        
+    </div>
+  </div>
+</div>
+
+<br/>
+<br/>
+
+<div class="card">
+  <div class="card-header">
+    Code
+  </div>
+  <div class="card-body">
+    <pre>
+        void IncrementCount()
+        {
+        blazorConfirmDialog.NewDialog( message: "Are you sure do you want to increment the counter?", 
+                                    onSuccessDelegate: ( () => {currentCount++;
+                                                                    StateHasChanged();
+                                                                    } ) );
+        }
+    </pre>
+  </div>
+</div>
 
 @functions {
     

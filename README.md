@@ -1,12 +1,24 @@
 # BlazorConfirm
 
-A Blazor wrapper of [Window.confirm()](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm) as .Net Blazor Component. 
+A Blazor wrapper of 
+[Window.confirm()](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm) 
+and 
+[onbeforeunload](https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload) 
+confirmation as .Net Blazor Component. 
 
 The sample project has been published [here](https://ctrl-alt-d.github.io/BlazorConfirm/).
 
 ```
 Note: Just as Blazor, this repo is also experimental.
 ```
+
+## Why confirm?
+
+Remember:
+
+>[Avoid using dialog boxes for confirmation.](https://alistapart.com/article/neveruseawarning)
+
+... but in some cases we need them. 
 
 ## ScreenShot and Demo
 
@@ -19,6 +31,9 @@ Demo: https://ctrl-alt-d.github.io/BlazorConfirm/
 
 ## Changes
 
+- 0.6.0.1 
+  - Handling onbeforeunload
+
 - version 0.6.0
   - initial version for blazor 0.6.0
 
@@ -26,11 +41,11 @@ Demo: https://ctrl-alt-d.github.io/BlazorConfirm/
 ## Configuration
 
 ```
-dotnet add package BlazorConfirm --version 0.6.0
+dotnet add package BlazorConfirm --version 0.6.0.1
 ```
 Or:
 ```
-Install-Package BlazorConfirm -Version 0.6.0`
+Install-Package BlazorConfirm -Version 0.6.0.1
 ```
 
 ## Configure the dependency injection
@@ -83,9 +98,9 @@ At this point you can wrap your code into the `onSuccessDelegate` Dialog:
 void IncrementCount()
 {
     blazorConfirmDialog.NewDialog( message: "Are you sure do you want to increment the counter?", 
-                                    onSuccessDelegate: ( () => {currentCount++;
-                                                                StateHasChanged();
-                                                                } ) );
+                                   onSuccessDelegate: ( () => {currentCount++;
+                                                               StateHasChanged();
+                                                               } ) );
 }
 ```
 
