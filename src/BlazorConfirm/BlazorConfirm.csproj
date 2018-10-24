@@ -11,7 +11,7 @@
     <Version>0.6.0.1</Version>
     <Authors>Dani Herrera</Authors>
     <Company>ctrl.alt.d</Company>
-    <Description>Blazor dotnet wrapper for JavaScript Window.confirm() and dotnet helper to prevent close tab via onbeforeunload.</Description>
+    <Description>A Blazor Wrapper for JS's Window.confirm() and onbeforeunload as .Net Blazor Component.</Description>
     <RepositoryUrl>https://github.com/ctrl-alt-d/BlazorConfirm.git</RepositoryUrl>
     <PackageTags>Blazor,Component,Wrapper</PackageTags>
     <PackageReleaseNotes>
