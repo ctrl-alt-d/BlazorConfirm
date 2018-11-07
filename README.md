@@ -1,5 +1,7 @@
 # BlazorConfirm
 
+## Blazor Confirm Dialog | Blazor Confirm Close Tab 
+
 A Blazor wrapper of 
 [Window.confirm()](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm) 
 and 
