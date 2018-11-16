@@ -8,13 +8,15 @@
     <LangVersion>7.3</LangVersion>
 
     <PackageId>BlazorConfirm</PackageId>
-    <Version>0.6.0.1</Version>
+    <Version>0.7.0.1</Version>
     <Authors>Dani Herrera</Authors>
     <Company>ctrl.alt.d</Company>
     <Description>A Blazor Wrapper for JS's Window.confirm() and onbeforeunload as .Net Blazor Component.</Description>
+    <PackageProjectUrl>https://github.com/ctrl-alt-d/BlazorConfirm</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ctrl-alt-d/BlazorConfirm.git</RepositoryUrl>
     <PackageTags>Blazor,Component,Wrapper</PackageTags>
     <PackageReleaseNotes>
+0.7.0.1 Migrated to Blazor 0.7.0    
 0.6.0.1 Handling onbeforeunload
 0.6.0 Initial version
     </PackageReleaseNotes>
@@ -28,8 +30,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Blazor.Browser" Version="0.6.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Blazor.Build" Version="0.6.0" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.AspNetCore.Blazor.Browser" Version="0.7.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Blazor.Build" Version="0.7.0" PrivateAssets="all" />
   </ItemGroup>
 
 </Project>
