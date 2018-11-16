@@ -31,6 +31,9 @@ Demo: https://ctrl-alt-d.github.io/BlazorConfirm/
 
 ## Changes
 
+- 0.7.0.1 
+  - Migrated to Blazor 0.7.0 experimental.
+
 - 0.6.0.1 
   - Handling onbeforeunload
 
@@ -41,11 +44,11 @@ Demo: https://ctrl-alt-d.github.io/BlazorConfirm/
 ## Configuration
 
 ```
-dotnet add package BlazorConfirm --version 0.6.0.1
+dotnet add package BlazorConfirm --version 0.7.0.1
 ```
 Or:
 ```
-Install-Package BlazorConfirm -Version 0.6.0.1
+Install-Package BlazorConfirm -Version 0.7.0.1
 ```
 
 ## Configure the dependency injection
