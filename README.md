@@ -1,5 +1,7 @@
 # BlazorConfirm
 
+**Deprecated** Sorry guys, no maintenance. This library is deprecated.
+
 ## Blazor Confirm Dialog | Blazor Confirm Close Tab 
 
 A Blazor wrapper of 
